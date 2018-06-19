@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,7 @@ namespace n8
                 else if (r == 0)
                 {
                     yearComplex = true;
+                    // not complex
 
 
 
@@ -230,6 +232,25 @@ namespace n8
             Console.WriteLine(nextDate.annee +"-"+ nextDate.mois+"-"+ nextDate.jour);
         }
 
-        
+        public static void afficherlaDay() {
+
+            CultureInfo ci = new CultureInfo("fr-FR") ;
+          
+
+
+            if (ci.Name == "fr-FR")
+            {
+
+
+                }
+                string stringValue = Enum.GetName(typeof(DayOfWeek), dat.jour);
+
+                Console.WriteLine(stringValue);
+
+
+            }
+
+
+        }
     }
 }

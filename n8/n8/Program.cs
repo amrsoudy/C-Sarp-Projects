@@ -24,7 +24,9 @@ namespace n8
             Utils.demande();
             Utils.AfficherLaDate();
             Utils.afficheNextJour();
-            
+            Utils.afficherlaDay();
+
+
 
         }
     }
