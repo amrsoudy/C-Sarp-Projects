@@ -12,7 +12,7 @@ namespace n8
     {
         public struct date
         {
-            public int annee;
+            public   int annee;
             public int mois;
             public int jour;
 
@@ -23,6 +23,8 @@ namespace n8
         {
             Utils.demande();
             Utils.AfficherLaDate();
+            Utils.afficheNextJour();
+            
 
         }
     }
