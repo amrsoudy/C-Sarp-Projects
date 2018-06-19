@@ -20,16 +20,16 @@ namespace N2
 
 
             // string stringValue = Enum.GetName(typeof(Day), num);
-            CultureInfo current = CultureInfo.CurrentUICulture;
-			// CultureInfo ci = new CultureInfo("en-US");
+            CultureInfo ci = CultureInfo.CurrentUICulture;
+			 //CultureInfo ci = new CultureInfo("en-US");
 			//CultureInfo ci = new CultureInfo("fr-FR");
 
 
-            if (current.Name == "fr-FR")
+            if (ci.Name == "fr-FR")
             {
 
 
-                String StringV = current.DateTimeFormat.DayNames[num];
+                String StringV = ci.DateTimeFormat.DayNames[num];
 
                 Console.WriteLine(StringV);
 
@@ -37,12 +37,23 @@ namespace N2
             }
 
 
-            else if (current.Name == "en-EN")
+            else if (ci.Name == "en-US")
             {
 
 
 
-                String StringV = current.DateTimeFormat.DayNames[num];
+                String StringV = ci.DateTimeFormat.DayNames[num];
+
+                Console.WriteLine(StringV);
+
+
+            }
+            else if (ci.Name == "en-EN")
+            {
+
+
+
+                String StringV = ci.DateTimeFormat.DayNames[num];
 
                 Console.WriteLine(StringV);
 
