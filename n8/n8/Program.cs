@@ -7,21 +7,23 @@ using System.Threading.Tasks;
 namespace n8
 {
 
-    struct date
+
+      class Program
     {
-        public int aneee;
-        public int mois;
-        public int jour;
+        public struct date
+        {
+            public int annee;
+            public int mois;
+            public int jour;
 
 
 
-    }
-    class Program
-    {
+        }
         static void Main(string[] args)
         {
+            Utils.demande();
+            Utils.AfficherLaDate();
 
-            
         }
     }
 }
