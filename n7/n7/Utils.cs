@@ -25,7 +25,7 @@ namespace n7
                
 
 
-                Console.WriteLine(p.no +"      "+ p.nom +"    "+ p.prix +"    "+ p.NoTotal);
+                Console.WriteLine(p.no +"      "+ p.nom +"    "+ p.prix +" --   "+ p.NoTotal);
 
 
 

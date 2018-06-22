@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{321CD438-E5E6-4A67-A5AD-298E4FF69B62}</ProjectGuid>
+    <ProjectGuid>{55F2B1CD-B4CB-47BE-99D9-6422CC69E627}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>n3</RootNamespace>
-    <AssemblyName>n3</AssemblyName>
+    <RootNamespace>n8</RootNamespace>
+    <AssemblyName>n8</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
