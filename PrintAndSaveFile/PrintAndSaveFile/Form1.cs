@@ -8,20 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Printing;
 
 namespace PrintAndSaveFile
 {
+    
+   
     public partial class Form1 : Form
     {
+        PrintDocument pDoc = new PrintDocument();
         public Form1()
         {
+
+            
             InitializeComponent();
+
+            pDoc.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
+
+
         }
 
         private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
 
-    
             OpenFileDialog op = openFile;
 
             if (op.ShowDialog() == DialogResult.OK)
@@ -43,7 +53,7 @@ namespace PrintAndSaveFile
             sv.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             if (sv.ShowDialog() == DialogResult.OK)
             {
-                richTextBox1.SaveFile(sv.FileName,RichTextBoxStreamType.PlainText);
+                richTextBox1.SaveFile(sv.FileName, RichTextBoxStreamType.PlainText);
 
                 this.Text = sv.FileName;
             }
@@ -95,7 +105,8 @@ namespace PrintAndSaveFile
 
             fd.Font = richTextBox1.SelectionFont;
 
-            if (fd.ShowDialog() == DialogResult.OK) {
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
 
                 richTextBox1.SelectionFont = fd.Font;
 
@@ -107,9 +118,10 @@ namespace PrintAndSaveFile
         private void backGroundToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ColorDialog cd = new ColorDialog();
-            if (cd.ShowDialog() == DialogResult.OK) {
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
 
-                richTextBox1.BackColor= cd.Color;
+                richTextBox1.BackColor = cd.Color;
 
             }
 
@@ -121,8 +133,28 @@ namespace PrintAndSaveFile
             MessageBox.Show("Version de Amt Note Pad est v  1.0 ");
         }
 
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+        
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+                PrintDialog pdo = new PrintDialog();
+
+            pdo.Document = pDoc;
+            if (pdo.ShowDialog() == DialogResult.OK) {
+
+
+                pDoc.Print();
+
+            } 
+
         }
     }
 }
