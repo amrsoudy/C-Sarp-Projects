@@ -20,8 +20,8 @@ namespace N2
 
 
             // string stringValue = Enum.GetName(typeof(Day), num);
-            CultureInfo ci = CultureInfo.CurrentUICulture;
-			 //CultureInfo ci = new CultureInfo("en-US");
+          //  CultureInfo ci = CultureInfo.CurrentUICulture;
+			 CultureInfo ci = new CultureInfo("en-US");
 			//CultureInfo ci = new CultureInfo("fr-FR");
 
 

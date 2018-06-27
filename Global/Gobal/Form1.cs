@@ -22,30 +22,44 @@ namespace Gobal
         private void button2_Click(object sender, EventArgs e)
         {
 
-            CultureInfo ci = new CultureInfo("en-US");
-
+          //  CultureInfo ci = new CultureInfo("en-US");
             Assembly a = Assembly.Load("Gobal");
             ResourceManager rm = new ResourceManager("Gobal.Lang.LangRes", a);
-            label1.Text = rm.GetString("fname", ci);
-            label2.Text = rm.GetString("lname", ci);
-            label3.Text = rm.GetString("age", ci);
-            label4.Text = rm.GetString("persInf", ci);
-            button1.Text = rm.GetString("reg", ci);
-            pictureBox1.Image = (Image)rm.GetObject("flag", ci);
+
+            label1.Text = rm.GetString("fname");
+            label2.Text = rm.GetString("lname");
+            label3.Text = rm.GetString("age");
+            label4.Text = rm.GetString("persInf");
+            button1.Text = rm.GetString("reg");
+            pictureBox1.Image = (Image)rm.GetObject("flag");
+
+            //label1.Text = rm.GetString("fname", ci);
+            //label2.Text = rm.GetString("lname", ci);
+            //label3.Text = rm.GetString("age", ci);
+            //label4.Text = rm.GetString("persInf", ci);
+            //button1.Text = rm.GetString("reg", ci);
+            //pictureBox1.Image = (Image)rm.GetObject("flag", ci);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CultureInfo ci = new CultureInfo("fr-FR");
-
+           // CultureInfo ci = new CultureInfo("fr-FR");
             Assembly a = Assembly.Load("Gobal");
             ResourceManager rm = new ResourceManager("Gobal.Lang.LangResFr", a);
-            label1.Text = rm.GetString("fname", ci);
-            label2.Text = rm.GetString("lname", ci);
-            label3.Text = rm.GetString("age", ci);
-            label4.Text = rm.GetString("persInf", ci);
-            button1.Text = rm.GetString("reg", ci);
-            pictureBox1.Image = (Image)rm.GetObject("flag", ci);
+
+            label1.Text = rm.GetString("fname");
+            label2.Text = rm.GetString("lname");
+            label3.Text = rm.GetString("age");
+            label4.Text = rm.GetString("persInf");
+            button1.Text = rm.GetString("reg");
+            pictureBox1.Image = (Image)rm.GetObject("flag");
+
+            //label1.Text = rm.GetString("fname", ci);
+            //label2.Text = rm.GetString("lname", ci);
+            //label3.Text = rm.GetString("age", ci);
+            //label4.Text = rm.GetString("persInf", ci);
+            //button1.Text = rm.GetString("reg", ci);
+            //pictureBox1.Image = (Image)rm.GetObject("flag", ci);
         }
 
        
