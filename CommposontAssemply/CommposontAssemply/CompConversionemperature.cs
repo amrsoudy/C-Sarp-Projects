@@ -13,7 +13,14 @@ namespace CommposontAssemply
         {
 
 
-            return Celsius * 9 / 5.0 + 32;
+            return (int)((Celsius * 9 )/ 5.0 + 32);
+
+        }
+        public double ConversionFahrToCels(double Fah)
+        {
+
+
+            return (int)((Fah-32) * 5 /9.0 );
 
         }
     }
