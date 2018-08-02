@@ -32,7 +32,7 @@ namespace NotationComposontSerie2Anne
             {
 
                 comboBox1.Items.Add(i);
-
+                int index  =comboBox1.SelectedIndex;
             }
         }
 
