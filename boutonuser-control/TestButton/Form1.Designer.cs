@@ -38,6 +38,7 @@
             this.userBouton1.Name = "userBouton1";
             this.userBouton1.Size = new System.Drawing.Size(435, 317);
             this.userBouton1.TabIndex = 0;
+            this.userBouton1.Click += new System.EventHandler(this.userBouton1_Click_1);
             // 
             // Form1
             // 
@@ -47,7 +48,6 @@
             this.Controls.Add(this.userBouton1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
