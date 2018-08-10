@@ -38,5 +38,15 @@ namespace TestButton
         {
 
         }
+
+        private void userBouton1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("you clicked me ");
+        }
+
+        private void userBouton1_Load_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

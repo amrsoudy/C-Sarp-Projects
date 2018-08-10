@@ -63,17 +63,17 @@ namespace boutonuser_control
 
             //graphics.DrawString(labelBouton, font, textBrush, Width / 2 - fontHeight,Height/2-fontHeight);
 
-            rectImg = new Rectangle(131, 113,800,200);
+            rectImg = new Rectangle(131, 130,700,100);
             backgroungImg = new Bitmap(this.Width, this.Height);
             Graphics g = Graphics.FromImage(backgroungImg);
-            g.FillRectangle(new SolidBrush(Color.Aqua), new Rectangle(20, 30, Width, Height));
+            g.FillRectangle(new SolidBrush(Color.Aqua), new Rectangle(131, 130, Width, Height));
             SizeF textSize = g.MeasureString(this.dialText,this.Font);
             RectangleF digiFRectText = new RectangleF(this.Width / 2 - textSize.Width / 2, (int)(this.Height * .92), textSize.Width,textSize.Height);
             g.DrawString(dialText, this.Font, new SolidBrush(this.ForeColor), digiFRectText);
 
             e.Graphics.DrawImage(backgroungImg, rectImg);
             Pen thinkPen = new Pen(Color.Black, Width / 80);
-            g.DrawLine(thinkPen, 20, 100, 10, 20);
+            g.DrawLine(thinkPen, 20, 30, 10, 20);
             
             
         }
@@ -81,8 +81,9 @@ namespace boutonuser_control
         {
             base.OnPaintBackground(e);
             e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
-            e.Graphics.FillRectangle(new SolidBrush(Color.Transparent), new Rectangle(0, 0, Width, Height));
-            if (backgroungImg == null || requireReDraw) {
+            e.Graphics.FillRectangle(new SolidBrush(Color.Transparent), new Rectangle(0, 0, 300, 20));
+            if (backgroungImg == null || requireReDraw)
+            {
 
 
                 backgroungImg = new Bitmap(this.Width, this.Height);

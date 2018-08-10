@@ -34,10 +34,12 @@
             // userBouton1
             // 
             this.userBouton1.dialText = "Click Click";
-            this.userBouton1.Location = new System.Drawing.Point(169, 55);
+            this.userBouton1.Location = new System.Drawing.Point(-44, 32);
             this.userBouton1.Name = "userBouton1";
-            this.userBouton1.Size = new System.Drawing.Size(435, 317);
+            this.userBouton1.Size = new System.Drawing.Size(864, 610);
             this.userBouton1.TabIndex = 0;
+            this.userBouton1.Load += new System.EventHandler(this.userBouton1_Load_2);
+            this.userBouton1.Click += new System.EventHandler(this.userBouton1_Click_1);
             // 
             // Form1
             // 
