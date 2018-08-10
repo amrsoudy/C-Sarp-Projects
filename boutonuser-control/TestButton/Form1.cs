@@ -18,25 +18,21 @@ namespace TestButton
          
         }
 
-        private void userBouton1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("you cliced botun ");
-
-        }
+       
 
         private void userBouton1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void userBouton1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-        private void userBouton1_Load_1(object sender, EventArgs e)
+        private void userBouton1_Click_1(object sender, EventArgs e)
         {
-
+            MessageBox.Show("tu clicker la bouton ");
         }
 
         private void userBouton1_Click_1(object sender, EventArgs e)

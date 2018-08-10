@@ -15,7 +15,7 @@ namespace boutonuser_control
     {
      //   public Color background = Color.Gray;
         private string _labelBouton = "Click ";
-        [Browsable(true), DefaultValue("click ")]
+        [Browsable(true), DefaultValue("click  ")]
         private Image backgroungImg;
         private Rectangle rectImg;
         private bool requireReDraw = true;
@@ -98,5 +98,7 @@ namespace boutonuser_control
         {
             InitializeComponent();
         }
+
+        
     }
 }
