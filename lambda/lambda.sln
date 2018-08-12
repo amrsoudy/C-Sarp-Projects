@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lambda", "lambda\lambda.csproj", "{A727B685-53B2-4CF4-9D08-CA4FA7EEEEE7}"
+=======
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "lambda\Event.csproj", "{9A6E7A92-25F3-4CF0-A24F-5F000790ED8C}"
+>>>>>>> 69cb9e5a9b5317418700e4ca4592801dc458e5d5
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +18,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
+		{A727B685-53B2-4CF4-9D08-CA4FA7EEEEE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A727B685-53B2-4CF4-9D08-CA4FA7EEEEE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A727B685-53B2-4CF4-9D08-CA4FA7EEEEE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A727B685-53B2-4CF4-9D08-CA4FA7EEEEE7}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
 		{9A6E7A92-25F3-4CF0-A24F-5F000790ED8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A6E7A92-25F3-4CF0-A24F-5F000790ED8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A6E7A92-25F3-4CF0-A24F-5F000790ED8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A6E7A92-25F3-4CF0-A24F-5F000790ED8C}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 69cb9e5a9b5317418700e4ca4592801dc458e5d5
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
