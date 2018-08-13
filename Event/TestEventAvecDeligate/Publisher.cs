@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace TestEventAvecDeligate
 {
     class Publisher
-    {
-       public delegate void MonDelegate(Object Publisher ,InfoEventArgs timeInformation);
+    {// Objectp
+       public delegate void MonDelegate(InfoEventArgs timeInformation);
 
         public event MonDelegate maValeurTempChanger;
         public int temp { get; set; }
@@ -17,14 +17,14 @@ namespace TestEventAvecDeligate
 
             temp = val;
             InfoEventArgs info = new InfoEventArgs(temp);
-            onvalueChanger(this, info);
+            onvalueChanger(info);
 
         }
 
-        private void onvalueChanger(Publisher publisher, InfoEventArgs timeInformation)
+        private void onvalueChanger( InfoEventArgs timeInformation)
         {
             if (maValeurTempChanger != null) {
-                maValeurTempChanger(publisher, timeInformation);
+                maValeurTempChanger( timeInformation);
 
             }
         }

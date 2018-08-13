@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AquaGauge">
-      <HintPath>..\..\..\..\..\Downloads\composant_jauge_dll\AquaGauge.dll</HintPath>
+      <HintPath>..\..\..\..\composant_jauge_dll\AquaGauge.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -9,7 +9,7 @@ namespace TestEventAvecDeligate
     class Observeur3
     {
 
-        public void EcrireJauje(Object publisher, InfoEventArgs info) {
+        public void EcrireJauje( InfoEventArgs info) {
 
             Simulateur.GetInstance().jauje.Value = info.valeur;
 

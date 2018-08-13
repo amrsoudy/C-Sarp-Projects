@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TestEventAvecDeligate
 {
-    public  partial class Simulateur : Form
+    public partial class Simulateur : Form
     {
         private static Simulateur simulateur;
         Publisher pub;
@@ -19,7 +19,7 @@ namespace TestEventAvecDeligate
         Observeur2 obs2;
         Observeur1 obs1;
         Observer4 obs4;
-         Observeur5 obs5;
+        Observeur5 obs5;
 
 
 
@@ -34,9 +34,10 @@ namespace TestEventAvecDeligate
             AttacherLesObservers();
         }
 
-        
 
-        public static  Simulateur GetInstance() {
+
+        public static Simulateur GetInstance()
+        {
 
             if (simulateur != null)
             {
@@ -45,7 +46,8 @@ namespace TestEventAvecDeligate
 
 
             }
-            else {
+            else
+            {
 
                 simulateur = new Simulateur();
                 return simulateur;
@@ -57,10 +59,10 @@ namespace TestEventAvecDeligate
 
         private void AttacherLesObservers()
         {
-             pub = new Publisher();
-             obs1 = new Observeur1();
-             obs2 = new Observeur2();
-             obs3 = new Observeur3();
+            pub = new Publisher();
+            obs1 = new Observeur1();
+            obs2 = new Observeur2();
+            obs3 = new Observeur3();
             obs4 = new Observer4();
             obs5 = new Observeur5();
             pub.maValeurTempChanger += new Publisher.MonDelegate(obs1.EcrireEcran);
@@ -76,17 +78,17 @@ namespace TestEventAvecDeligate
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             pub.notifer(++Valeur);
         }
         private void button2_Click(object sender, EventArgs e)
         {
-         
-            
-                RemoveFromPub();
-            
 
-            
+
+            RemoveFromPub();
+
+
+
         }
         int x = 0;
 
@@ -106,11 +108,12 @@ namespace TestEventAvecDeligate
 
                 x = 2;
             }
-            else if (x == 2) {
+            else if (x == 2)
+            {
                 pub.maValeurTempChanger -= new Publisher.MonDelegate(obs3.EcrireJauje);
 
                 x = 3;
-                
+
 
             }
             else if (x == 3)
@@ -130,7 +133,7 @@ namespace TestEventAvecDeligate
 
 
             }
-            else if(x == 5)
+            else if (x == 5)
             {
                 x = 0;
 
