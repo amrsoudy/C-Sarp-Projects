@@ -38,7 +38,7 @@ namespace EventDelegateSerie6
 
         private void GereVerifiFolder(object sender, FileSystemEventArgs e)
         {
-            this.richTextBox1.Invoke(new Action(()=> richTextBox1.Text = String.Format("Dossier cree. {0}{1}",e.FullPath, Environment.NewLine)));
+            this.richTextBox1.Invoke(new Action(()=> richTextBox1.Text += String.Format("Dossier cree. {0}{1}",e.FullPath, Environment.NewLine)));
 
         }
 
