@@ -65,12 +65,15 @@ namespace TestEventAvecDeligate
             obs3 = new Observeur3();
             obs4 = new Observer4();
             obs5 = new Observeur5();
+        
+
+
             pub.maValeurTempChanger += new Publisher.MonDelegate(obs1.EcrireEcran);
             pub.maValeurTempChanger += new Publisher.MonDelegate(obs2.ecrireEcran);
             pub.maValeurTempChanger += new Publisher.MonDelegate(obs3.EcrireJauje);
-            pub.maValeurTempChanger += new Publisher.MonDelegate(obs4.EcrireJuaje2);
-            pub.maValeurTempChanger += new Publisher.MonDelegate(obs5.EcrireJuaje2);
 
+            obs1.deuxValeurTempChanger += new Observeur1.DeuxDelegate(obs4.EcrireJuaje2);
+            obs1.deuxValeurTempChanger += new Observeur1.DeuxDelegate(obs5.EcrireJuaje2);
 
 
 
@@ -80,6 +83,7 @@ namespace TestEventAvecDeligate
         {
 
             pub.notifer(++Valeur);
+            
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -96,14 +100,14 @@ namespace TestEventAvecDeligate
         {
             if (x == 0)
             {
-                pub.maValeurTempChanger -= new Publisher.MonDelegate(obs5.EcrireJuaje2);
+                obs1.deuxValeurTempChanger -= new Observeur1.DeuxDelegate(obs5.EcrireJuaje2);
 
                 x = 1;
 
             }
             else if (x == 1)
             {
-                pub.maValeurTempChanger -= new Publisher.MonDelegate(obs4.EcrireJuaje2);
+                obs1.deuxValeurTempChanger -= new Observeur1.DeuxDelegate(obs4.EcrireJuaje2);
 
 
                 x = 2;

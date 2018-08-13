@@ -12,6 +12,8 @@ namespace TestEventAvecDeligate
         public void EcrireJauje( InfoEventArgs info) {
 
             Simulateur.GetInstance().jauje.Value = info.valeur;
+            Simulateur.GetInstance().jauje.DialText = info.valeur.ToString();
+
 
 
         }

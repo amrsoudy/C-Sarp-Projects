@@ -8,12 +8,37 @@ namespace TestEventAvecDeligate
 {
     class Observeur1
     {
-        public void EcrireEcran(InfoEventArgs info) {
+        public delegate void DeuxDelegate(InfoEventArgs timeInformation);
+        public event DeuxDelegate deuxValeurTempChanger;
+        int temp = 0;
+
+        public void EcrireEcran(InfoEventArgs info)
+        {
 
 
-            Simulateur.GetInstance().Testobs1 = "observer  1 " +info.valeur;
+            Simulateur.GetInstance().Testobs1 = "observer  1 " + info.valeur;
+            notifer(info.valeur);
 
 
+
+
+    }
+        public void notifer(int val)
+        {
+
+            temp = val;
+            InfoEventArgs info = new InfoEventArgs(temp);
+            onvalueChanger(info);
+
+        }
+
+        private void onvalueChanger(InfoEventArgs timeInformation)
+        {
+            if (deuxValeurTempChanger != null)
+            {
+                deuxValeurTempChanger(timeInformation);
+
+            }
         }
     }
 }
