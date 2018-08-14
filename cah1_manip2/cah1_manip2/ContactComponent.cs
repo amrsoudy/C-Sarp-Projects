@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace cah1_manip2
 {
     [DefaultProperty("nomContact")]
-    class ContactComponent
+    public class ContactComponent :Component
+
     {
         private String m_nomContact;
         private String m_typeContact;
