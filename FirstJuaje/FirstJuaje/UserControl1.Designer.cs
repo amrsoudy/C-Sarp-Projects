@@ -1,4 +1,6 @@
-﻿namespace FirstJuaje
+﻿using System.Windows.Forms;
+
+namespace FirstJuaje
 {
     partial class UserControl1
     {
@@ -6,6 +8,7 @@
         /// Variable nécessaire au concepteur.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private AutoScaleMode AutoScaleMode;
 
         /// <summary>
         /// Nettoyage des ressources utilisées.
