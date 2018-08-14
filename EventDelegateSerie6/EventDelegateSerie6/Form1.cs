@@ -13,6 +13,8 @@ namespace EventDelegateSerie6
 {
     public partial class Form1 : Form
     {
+        FileSystemWatcher watcher = new FileSystemWatcher(@"c:\Temp", "*.*");
+
 
         Boolean modeEcoute = false; 
         public Form1()
@@ -23,7 +25,6 @@ namespace EventDelegateSerie6
 
         private void DemarreEcouter() {
 
-            FileSystemWatcher watcher = new FileSystemWatcher(@"c:\Temp", "*.*");
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new EventHandler(GereEcouteEcran);
             Microsoft.Win32.SystemEvents.TimeChanged += new EventHandler(GereEcouteHorloge);
          
@@ -44,6 +45,7 @@ namespace EventDelegateSerie6
 
         private void ArreteEcoute() {
 
+            watcher.EnableRaisingEvents = false;
 
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged -= new EventHandler(GereEcouteEcran);
             Microsoft.Win32.SystemEvents.TimeChanged -= new EventHandler(GereEcouteHorloge);
