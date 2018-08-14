@@ -8,7 +8,7 @@ namespace TestEventAvecDeligate
 {
     class Observeur2
     {
-        public void ecrireEcran(Object publisher, InfoEventArgs info) {
+        public void ecrireEcran( InfoEventArgs info) {
 
             Simulateur.GetInstance().Testobs2 = "Observer 2 " + (info.valeur + 23);
 

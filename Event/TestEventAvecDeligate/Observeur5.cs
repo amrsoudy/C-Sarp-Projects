@@ -8,7 +8,7 @@ namespace TestEventAvecDeligate
 {
     class Observeur5
     {
-        public void EcrireJuaje2(Object publisher, InfoEventArgs info)
+        public void EcrireJuaje2(InfoEventArgs info)
         {
 
             Simulateur.GetInstance().jauje3.Value = info.valeur3;
