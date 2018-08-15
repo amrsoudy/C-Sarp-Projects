@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,16 +18,30 @@ namespace EventDelegateSerie6
         public Form1()
         {
             InitializeComponent();
+       
         }
 
         private void DemarreEcouter() {
 
-
+            FileSystemWatcher watcher = new FileSystemWatcher(@"c:\Temp", "*.*");
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new EventHandler(GereEcouteEcran);
             Microsoft.Win32.SystemEvents.TimeChanged += new EventHandler(GereEcouteHorloge);
-            this.modeEcoute = true; 
+         
+            watcher.EnableRaisingEvents = true;
+            watcher.Created += new FileSystemEventHandler(GereVerifiFolder);
+
+            this.modeEcoute = true;
+            
+           
 
         }
+
+        private void GereVerifiFolder(object sender, FileSystemEventArgs e)
+        {
+            this.richTextBox1.Invoke(new Action(()=> richTextBox1.Text += String.Format("Dossier cree. {0}{1}",e.FullPath, Environment.NewLine)));
+
+        }
+
         private void ArreteEcoute() {
 
 

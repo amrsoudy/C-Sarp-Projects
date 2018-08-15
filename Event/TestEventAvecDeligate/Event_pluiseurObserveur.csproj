@@ -33,7 +33,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AquaGauge">
+<<<<<<< HEAD:Event/TestEventAvecDeligate/Event.csproj
       <HintPath>NewFolder1\composant_jauge_dll\AquaGauge.dll</HintPath>
+=======
+      <HintPath>..\..\..\..\composant_jauge_dll\AquaGauge.dll</HintPath>
+>>>>>>> 5c106df91ef229bdd4f6ccf2b253c076826ff8f1:Event/TestEventAvecDeligate/Event_pluiseurObserveur.csproj
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -73,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(511, 81);
+            this.button1.Location = new System.Drawing.Point(577, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -83,9 +83,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(493, 32);
+            this.button2.Location = new System.Drawing.Point(522, 125);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 23);
+            this.button2.Size = new System.Drawing.Size(130, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "Remove observeur ";
             this.button2.UseVisualStyleBackColor = true;
@@ -108,11 +108,11 @@
             this.jauje2.ThresholdPercent = 0F;
             this.jauje2.Value = 0F;
             // 
-            // juaje3
+            // jauje3
             // 
             this.jauje3.BackColor = System.Drawing.Color.Transparent;
             this.jauje3.DialColor = System.Drawing.Color.DodgerBlue;
-            this.jauje3.DialText = null;
+            this.jauje3.DialText = "";
             this.jauje3.Glossiness = 11.36364F;
             this.jauje3.Location = new System.Drawing.Point(424, 230);
             this.jauje3.MaxValue = 300F;
