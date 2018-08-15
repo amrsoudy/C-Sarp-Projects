@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Bouton1 = new boutonuser_control_2015.UserBouton();
             this.TxtMesure = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Afficher = new System.Windows.Forms.Button();
+            this.Bouton1 = new boutonuser_control_2015.UserBouton();
             this.SuspendLayout();
-            // 
-            // Bouton1
-            // 
-            this.Bouton1.Location = new System.Drawing.Point(59, 52);
-            this.Bouton1.Mesure = 0;
-            this.Bouton1.Name = "Bouton1";
-            this.Bouton1.Size = new System.Drawing.Size(301, 170);
-            this.Bouton1.TabIndex = 0;
             // 
             // TxtMesure
             // 
@@ -67,6 +59,16 @@
             this.Afficher.Text = "Afficher";
             this.Afficher.UseVisualStyleBackColor = true;
             this.Afficher.Click += new System.EventHandler(this.Afficher_Click);
+            // 
+            // Bouton1
+            // 
+            this.Bouton1.Location = new System.Drawing.Point(59, 52);
+            this.Bouton1.Mesure = 0;
+            this.Bouton1.Name = "Bouton1";
+            this.Bouton1.Size = new System.Drawing.Size(301, 170);
+            this.Bouton1.TabIndex = 0;
+            this.Bouton1.Valeur_Max = 201;
+            this.Bouton1.Valeur_Min = 0;
             // 
             // Form1
             // 

@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace boutonuser_control_2015
 {
@@ -27,7 +28,23 @@ namespace boutonuser_control_2015
                 else
                 {
                     if (value > Valeur_Max) { _mesure = Valeur_Max; }
-                    else { _mesure = value; }
+                    else {
+
+                        DateTime dt = new DateTime();
+                        for (int i = 0; i < value; i++) {
+                            do
+                            {
+                                _mesure = i;
+
+
+                            } while (dt.AddSeconds(0.1) > DateTime.Now);
+                            //System.Threading.Thread.Sleep(20);
+
+
+
+                        }
+
+                    }
                 }
                 Invalidate();
             }
@@ -61,8 +78,8 @@ namespace boutonuser_control_2015
 
         public Color backgroundColor = Color.Beige;
         //etape 2
-        private string _labelBouton = "Click click";
-        [Browsable(true), DefaultValue("Click click")]
+        private string _labelBouton = "";
+        [Browsable(true), DefaultValue("")]
         public string LabelBouton
         {
             get { return _labelBouton; }
@@ -74,25 +91,29 @@ namespace boutonuser_control_2015
             Graphics graphics = e.Graphics;
 
             int penWidth = 4;
-            Pen pen = new Pen(Color.Black, 4);
+            Pen pen = new Pen(Color.Black, penWidth);
 
             int fontHeight = 10;
             Font font = new Font("Arial", fontHeight);
 
             SolidBrush brush = new SolidBrush(backgroundColor);
-            graphics.FillEllipse(brush, 0, 0, Width, Height);
+            graphics.FillRectangle(brush, 0, 0, Width, Height);
             SolidBrush textBrush = new SolidBrush(Color.Black);
 
-            graphics.DrawEllipse(pen, (int)penWidth / 2,
-              (int)penWidth / 2, Width - penWidth, Height - penWidth);
+            //graphics.DrawEllipse(pen, (int)penWidth / 2,
+            //(int)penWidth / 2, Width - penWidth, Height - penWidth);
+
+            graphics.DrawRectangle(pen,0,0,Width,Height);
 
             graphics.DrawString(LabelBouton, font, textBrush, Width / 2 - fontHeight,
               Height / 2 - fontHeight);
+            Pen pen2 = new Pen(Color.Blue,1);
+            graphics.DrawRectangle(pen2, ((int)Height - 50) / 2, ((int)Height- 50)/2, Width-100,50);
 
             SolidBrush brushValeur = new SolidBrush(Color.Red);
 
-            graphics.FillRectangle(brushValeur, 0,
-             ((int)Height - 10) / 2, Mesure, penWidth);//horiz
+            graphics.FillRectangle(brushValeur, ((int)Height - 50) / 2,
+             ((int)Height - 10) / 2, Mesure, 10);//horiz
 
 
         }
