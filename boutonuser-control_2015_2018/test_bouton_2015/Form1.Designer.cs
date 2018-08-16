@@ -36,7 +36,7 @@
             // 
             // TxtMesure
             // 
-            this.TxtMesure.Location = new System.Drawing.Point(198, 261);
+            this.TxtMesure.Location = new System.Drawing.Point(271, 414);
             this.TxtMesure.Name = "TxtMesure";
             this.TxtMesure.Size = new System.Drawing.Size(100, 20);
             this.TxtMesure.TabIndex = 1;
@@ -44,7 +44,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(132, 267);
+            this.label1.Location = new System.Drawing.Point(205, 420);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 2;
@@ -52,7 +52,7 @@
             // 
             // Afficher
             // 
-            this.Afficher.Location = new System.Drawing.Point(323, 261);
+            this.Afficher.Location = new System.Drawing.Point(396, 414);
             this.Afficher.Name = "Afficher";
             this.Afficher.Size = new System.Drawing.Size(75, 23);
             this.Afficher.TabIndex = 3;
@@ -62,23 +62,24 @@
             // 
             // Bouton1
             // 
-            this.Bouton1.Location = new System.Drawing.Point(59, 52);
+            this.Bouton1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Bouton1.Location = new System.Drawing.Point(226, 49);
             this.Bouton1.Mesure = 0;
             this.Bouton1.Name = "Bouton1";
-            this.Bouton1.Size = new System.Drawing.Size(301, 170);
-            this.Bouton1.TabIndex = 0;
-            this.Bouton1.Valeur_Max = 201;
+            this.Bouton1.Size = new System.Drawing.Size(509, 313);
+            this.Bouton1.TabIndex = 4;
+            this.Bouton1.Valeur_Max = 200;
             this.Bouton1.Valeur_Min = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 330);
+            this.ClientSize = new System.Drawing.Size(1076, 592);
+            this.Controls.Add(this.Bouton1);
             this.Controls.Add(this.Afficher);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtMesure);
-            this.Controls.Add(this.Bouton1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -87,11 +88,10 @@
         }
 
         #endregion
-
-        private boutonuser_control_2015.UserBouton Bouton1;
         private System.Windows.Forms.TextBox TxtMesure;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Afficher;
+        private boutonuser_control_2015.UserBouton Bouton1;
     }
 }
 
