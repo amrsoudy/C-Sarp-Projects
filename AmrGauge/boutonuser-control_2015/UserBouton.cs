@@ -81,7 +81,7 @@ namespace boutonuser_control_2015
 
             int penWidth = 4;
             Pen pen = new Pen(Color.Black, penWidth);
-            Pen penOrange = new Pen(Color.Red, 2);
+            Pen penOrange = new Pen(Color.Orange, 2);
 
 
             int fontHeight = 10;
@@ -110,7 +110,7 @@ namespace boutonuser_control_2015
             SolidBrush brushValeur = new SolidBrush(Color.Red);
             SolidBrush brushValeurWhite = new SolidBrush(Color.White);
             SolidBrush brushValeurBlack = new SolidBrush(Color.Black);
-            SolidBrush brushValeurRed = new SolidBrush(Color.Orange);
+            SolidBrush brushValeurres = new SolidBrush(Color.Red);
 
 
 
@@ -118,7 +118,7 @@ namespace boutonuser_control_2015
 
             int valeurWid = (int)((Width * 0.80));
             //
-            int beginingPoint = (int)(Width * 0.10);
+            int beginingPoint = (int)(Width * 0.10) ;
            //MessageBox.Show(beginingPoint.ToString());
 
 
@@ -147,13 +147,13 @@ namespace boutonuser_control_2015
 
                 }
             }
-            for (int i = 0; i <( Mesure*fin)/Valeur_Max+; i++)
+            for (int i = 0; i <( Mesure*fin)/Valeur_Max; i++)
             {
-
+                
                 // the bar red  
-                graphics.FillRectangle(brushValeur, (beginingPoint ), (int)(Height * 0.60)+2, i , 7);
-               // graphics.DrawEllipse(penOrange, (beginingPoint) - 14, (int)(Height * 0.60) + 2 - 14,14 + 14, 14 + 14);
-               // graphics.FillEllipse(brushValeurRed, (beginingPoint) - 14, (int)(Height * 0.60) + 2 - 14, 14 + 14, 14 + 14);
+                //graphics.FillRectangle(brushValeur, (beginingPoint ), (int)(Height * 0.60)+2, i , 7);
+               graphics.DrawEllipse(penOrange, (beginingPoint+i) - 14, (int)(Height * 0.60) + 2 - 14,14 + 14, 14 + 14);
+               // graphics.FillEllipse(brushValeurRed, (beginingPoint) - 14+i, (int)(Height * 0.60) + 2 - 14, 14 + 14, 14 + 14);
                 Thread.Sleep(50);
 
             }
