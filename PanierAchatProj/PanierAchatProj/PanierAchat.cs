@@ -8,7 +8,6 @@ namespace PanierAchatProj
 {
     class PanierAchat
     {
-        private String _nom;
         public String Nom { get; set; }
 
         private string _noItem;
@@ -20,7 +19,14 @@ namespace PanierAchatProj
         public String nameItem { get { return _nomItem; } set { _nomItem = value; } }
         public string taillItem { get { return _tailleItem; } set { _tailleItem = value; } }
 
-        public Decimal priceItem { get { return _prixItem; } set { _prixItem = value; } }
+        public Decimal priceItem { get { return _prixItem; } set {
+
+                if (value < 0) {
+
+                    value = 0;
+                }
+
+                _prixItem = value; } }
 
         public PanierAchat(string noItem,string nomItem,string tailleItem,Decimal prixItem)
         {

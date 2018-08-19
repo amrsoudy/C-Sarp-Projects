@@ -11,13 +11,13 @@ namespace _3aExparValeurouParRef
         static void Main(string[] args)
         {
 
-           ref int varEntree = 10;
+            int varEntree = 10;
 
             Console.WriteLine(varEntree);
 
-           //MethodeDeTestParameter(varEntree);
+           MethodeDeTestParameter(varEntree);
 
-            MethodeDeTestParameter(varEntree);
+            MethodeDeTestParameter(ref varEntree);
 
             Console.WriteLine(varEntree);
 

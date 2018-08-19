@@ -23,6 +23,13 @@ namespace PanierAchatProj
             Console.WriteLine("Enter le prix ");
             Decimal prix;
             Decimal.TryParse(Console.ReadLine(), out prix);
+            while (prix < 0) {
+                Console.WriteLine("your prix pas correct ");
+                Console.WriteLine("Enter le prix autre foix  svp");
+                
+                Decimal.TryParse(Console.ReadLine(), out prix);
+
+            }
 
 
             PanierAchat pa = new PanierAchat(code, nom, taille, prix);

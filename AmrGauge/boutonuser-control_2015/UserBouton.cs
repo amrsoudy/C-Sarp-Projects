@@ -31,21 +31,7 @@ namespace boutonuser_control_2015
                     if (value > Valeur_Max) { _mesure = Valeur_Max; }
                     else
                     {
-
-                        DateTime dt = new DateTime();
-                        for (int i = 0; i < value; i++)
-                        {
-                            do
-                            {
-                                _mesure = i;
-
-
-                            } while (dt.AddSeconds(0.1) > DateTime.Now);
-                            //System.Threading.Thread.Sleep(20);
-
-
-
-                        }
+                        _mesure = value;
 
                     }
                 }
@@ -79,7 +65,7 @@ namespace boutonuser_control_2015
             }
         }
 
-        public Color backgroundColor = Color.Beige;
+        public Color backgroundColor = Color.LightGray;
         //etape 2
         private string _labelBouton = "";
         [Browsable(true), DefaultValue("")]
@@ -95,6 +81,8 @@ namespace boutonuser_control_2015
 
             int penWidth = 4;
             Pen pen = new Pen(Color.Black, penWidth);
+            Pen penOrange = new Pen(Color.Red, 2);
+
 
             int fontHeight = 10;
             Font font = new Font("Arial", fontHeight);
@@ -118,47 +106,58 @@ namespace boutonuser_control_2015
               Height / 2 - fontHeight);
             Pen pen2 = new Pen(Color.Blue, 1);
 
-            graphics.DrawRectangle(pen2, (int)(Width * 0.10), (int)(Height * 0.10), (int)(Width * 0.80), (int)(Height * 0.80));
 
             SolidBrush brushValeur = new SolidBrush(Color.Red);
             SolidBrush brushValeurWhite = new SolidBrush(Color.White);
             SolidBrush brushValeurBlack = new SolidBrush(Color.Black);
+            SolidBrush brushValeurRed = new SolidBrush(Color.Orange);
 
 
 
-            int valeurWid = (int)((Width * 0.60));
+            // MessageBox.Show(Width.ToString());
+
+            int valeurWid = (int)((Width * 0.80));
+            //
+            int beginingPoint = (int)(Width * 0.10);
+           //MessageBox.Show(beginingPoint.ToString());
 
 
-            graphics.FillRectangle(brushValeurWhite, ((int)(Width * 0.40) / 2), (int)(Height * 0.45), valeurWid, 40);
+            graphics.FillRectangle(brushValeurWhite, (beginingPoint), (int)(Height * 0.60), valeurWid, 12);
 
             int f = 0;
-            for (int i = ((int)(Width * 0.40) / 2); i <= ((int)(Width * 0.40) / 2) + ((int)((Width * 0.60))); i += (((int)(Width * 0.40) / 2) + ((int)((Width * 0.60)))+20)/7)
+            int fin = beginingPoint + valeurWid+35;
+           // MessageBox.Show(Width.ToString()+"widith * 80"+ Width* 0.80+" begining "+beginingPoint +"  fin  : "+fin);
+
+            int incremntationPar = fin / 5;
+
+
+            for (int i = (beginingPoint ); i <= fin; i += incremntationPar)
             {
                 // create the  line sepratores 
-                if ((f == 0) ||(f == Valeur_Max))
+                
+                    graphics.FillRectangle(brushValeurBlack, i, (int)(Height * 0.60)-23, 1, (int)(Height * 0.12));
+
+
+
+                graphics.DrawString((f).ToString(), font, textBrush, i - 5, (int)(Height * 0.60) - 50);
+                if (f <= Valeur_Max)
                 {
-                    graphics.FillRectangle(brushValeurBlack, i, (int)(Height * 0.40), 5, (int)(Height * 0.3));
+                    f += Valeur_Max / 4;
+
 
                 }
-               
-                else {
-                    graphics.FillRectangle(brushValeur, i, (int)(Height * 0.40), 1, 80);
-
-                }
-
-                graphics.DrawString((f).ToString(), font, textBrush, i, (Height / 2) - 45);
-                f += Valeur_Max/5;
             }
-            for (int i = 0; i <( Mesure*valeurWid)/Valeur_Max; i++)
+            for (int i = 0; i <( Mesure*fin)/Valeur_Max+; i++)
             {
-               
+
                 // the bar red  
-                graphics.FillRectangle(brushValeur, ((int)(Width * 0.42) / 2), (int)(Height *0.48), i , 22);
+                graphics.FillRectangle(brushValeur, (beginingPoint ), (int)(Height * 0.60)+2, i , 7);
+               // graphics.DrawEllipse(penOrange, (beginingPoint) - 14, (int)(Height * 0.60) + 2 - 14,14 + 14, 14 + 14);
+               // graphics.FillEllipse(brushValeurRed, (beginingPoint) - 14, (int)(Height * 0.60) + 2 - 14, 14 + 14, 14 + 14);
                 Thread.Sleep(50);
 
             }
-            // write  all the numbers 
-            graphics.DrawString("puissance", font2, textBrush2, ((Width/2) -60), Height -80);
+        
 
 
         }
