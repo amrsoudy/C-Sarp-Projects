@@ -134,10 +134,10 @@ namespace boutonuser_control_2015
             int f = 0;
             for (int i = ((int)(Width * 0.40) / 2); i <= ((int)(Width * 0.40) / 2) + ((int)((Width * 0.60))); i += (((int)(Width * 0.40) / 2) + ((int)((Width * 0.60)))+20)/7)
             {
-
+                // create the  line sepratores 
                 if ((f == 0) ||(f == Valeur_Max))
                 {
-                    graphics.FillRectangle(brushValeurBlack, i, (int)(Height * 0.40), 5, 80);
+                    graphics.FillRectangle(brushValeurBlack, i, (int)(Height * 0.40), 5, (int)(Height * 0.3));
 
                 }
                
@@ -152,12 +152,12 @@ namespace boutonuser_control_2015
             for (int i = 0; i <( Mesure*valeurWid)/Valeur_Max; i++)
             {
                
-
+                // the bar red  
                 graphics.FillRectangle(brushValeur, ((int)(Width * 0.42) / 2), (int)(Height *0.48), i , 22);
                 Thread.Sleep(100);
 
             }
-
+            // write  all the numbers 
             graphics.DrawString("puissance", font2, textBrush2, ((Width/2) -60), Height -80);
 
 
