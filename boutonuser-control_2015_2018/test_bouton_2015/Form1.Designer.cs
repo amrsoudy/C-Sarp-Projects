@@ -72,7 +72,7 @@
             this.userBoutonfirst.Name = "userBoutonfirst";
             this.userBoutonfirst.Size = new System.Drawing.Size(540, 185);
             this.userBoutonfirst.TabIndex = 4;
-            this.userBoutonfirst.Valeur_Max = 200;
+            this.userBoutonfirst.Valeur_Max = 100;
             this.userBoutonfirst.Valeur_Min = 0;
             // 
             // button1
@@ -103,7 +103,7 @@
             this.userBouton1.Name = "userBouton1";
             this.userBouton1.Size = new System.Drawing.Size(540, 185);
             this.userBouton1.TabIndex = 9;
-            this.userBouton1.Valeur_Max = 200;
+            this.userBouton1.Valeur_Max = 100;
             this.userBouton1.Valeur_Min = 0;
             // 
             // userBouton2
@@ -114,7 +114,7 @@
             this.userBouton2.Name = "userBouton2";
             this.userBouton2.Size = new System.Drawing.Size(540, 185);
             this.userBouton2.TabIndex = 10;
-            this.userBouton2.Valeur_Max = 200;
+            this.userBouton2.Valeur_Max = 100;
             this.userBouton2.Valeur_Min = 0;
             // 
             // Form1

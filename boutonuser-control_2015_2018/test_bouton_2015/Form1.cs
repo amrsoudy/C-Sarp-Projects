@@ -71,7 +71,7 @@ namespace test_bouton_2015
 
             pub.maValeurChanger += new Publicher.MonDelgate(obs1.ecrireJuaje);
             pub.maValeurChanger += new Publicher.MonDelgate(obs2.ecrireJuaje);
-            pub.maValeurChanger += new Publicher.MonDelgate(obs3.ecrireJuaje);
+            pub.maValeurChanger += null;
 
 
         }

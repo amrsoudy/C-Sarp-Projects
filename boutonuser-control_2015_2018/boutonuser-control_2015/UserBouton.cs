@@ -142,7 +142,7 @@ namespace boutonuser_control_2015
                 }
                
                 else {
-                    graphics.FillRectangle(brushValeur, i, (int)(Height * 0.40), 1, 80);
+                    graphics.FillRectangle(brushValeur, i, (int)(Height * 0.40), 1, 50);
 
                 }
 
@@ -158,7 +158,7 @@ namespace boutonuser_control_2015
 
             }
             // write  all the numbers 
-            graphics.DrawString("puissance", font2, textBrush2, ((Width/2) -60), Height -80);
+            graphics.DrawString("puissance", font2, textBrush2, ((Width/2) -60), Height -60);
 
 
         }

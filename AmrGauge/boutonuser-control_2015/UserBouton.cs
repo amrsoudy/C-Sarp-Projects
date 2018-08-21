@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Drawing.Drawing2D;
 
 namespace boutonuser_control_2015
 {
@@ -14,7 +15,7 @@ namespace boutonuser_control_2015
     {
         private int _mesure = 0;
         private int _valeur_Min = 0;
-        private int _valeur_Max = 200;
+        private int _valeur_Max = 100;
 
 
         [Browsable(true), DefaultValue("0"), Description("represente la mesure ou la valeur à afficher"),
@@ -65,9 +66,17 @@ namespace boutonuser_control_2015
             }
         }
 
-        public Color backgroundColor = Color.LightGray;
-        //etape 2
-        private string _labelBouton = "";
+        private Color _backgroundColor = Color.LightGray;
+
+        public Color backgroundColor {
+
+            get { return _backgroundColor; }
+            set { _backgroundColor = value; Invalidate();}
+
+
+        }
+    //etape 2
+    private string _labelBouton = "";
         [Browsable(true), DefaultValue("")]
         public string LabelBouton
         {
@@ -101,9 +110,47 @@ namespace boutonuser_control_2015
             //(int)penWidth / 2, Width - penWidth, Height - penWidth);
 
             graphics.DrawRectangle(pen, 0, 0, Width, Height);
+            Rectangle rect = new Rectangle(0, 0, Width, Height);
 
-            graphics.DrawString(LabelBouton, font, textBrush, Width / 2 - fontHeight,
-              Height / 2 - fontHeight);
+            Rectangle rect1 = new Rectangle(10,10, Width-20, Height-20);
+          
+            
+
+            GraphicsPath RoundedRect(Rectangle bounds, int radius)
+            {
+                int diameter = radius * 2;
+                Size size = new Size(diameter, diameter);
+                Rectangle arc = new Rectangle(bounds.Location, size);
+                GraphicsPath path = new GraphicsPath();
+
+                if (radius == 0)
+                {
+                    path.AddRectangle(bounds);
+                    return path;
+                }
+
+                // top left arc  
+                path.AddArc(arc, 180, 90);
+
+                // top right arc  
+                arc.X = bounds.Right - diameter;
+                path.AddArc(arc, 270, 90);
+
+                // bottom right arc  
+                arc.Y = bounds.Bottom - diameter;
+                path.AddArc(arc, 0, 90);
+
+                // bottom left arc 
+                arc.X = bounds.Left;
+                path.AddArc(arc, 90, 90);
+
+                path.CloseFigure();
+                return path;
+            }
+
+            graphics.DrawPath(pen, RoundedRect(rect1, 12));
+
+            graphics.DrawString(LabelBouton, font, textBrush, Width / 2 - fontHeight, Height / 2 - fontHeight);
             Pen pen2 = new Pen(Color.Blue, 1);
 
 
@@ -116,30 +163,36 @@ namespace boutonuser_control_2015
 
             // MessageBox.Show(Width.ToString());
 
-            int valeurWid = (int)((Width * 0.80));
+            double valeurWid = ((Width * 0.80));
             //
-            int beginingPoint = (int)(Width * 0.10) ;
-           //MessageBox.Show(beginingPoint.ToString());
+            double beginingPoint = (Width * 0.10);
+
+            double fin = Width * 0.80;
+            //MessageBox.Show(beginingPoint.ToString());
 
 
-            graphics.FillRectangle(brushValeurWhite, (beginingPoint), (int)(Height * 0.60), valeurWid, 12);
+            graphics.FillRectangle(brushValeurWhite, (float)(beginingPoint), (float)(Height * 0.60), (float)fin, 12);
 
-            int f = 0;
-            int fin = beginingPoint + valeurWid+35;
-           // MessageBox.Show(Width.ToString()+"widith * 80"+ Width* 0.80+" begining "+beginingPoint +"  fin  : "+fin);
+            double f = 0;
+          
+         
+            // MessageBox.Show(Width.ToString()+"widith * 80"+ Width* 0.80+" begining "+beginingPoint +"  fin  : "+fin);
 
-            int incremntationPar = fin / 5;
+            double incremntationPar = Width / 5;
 
-
-            for (int i = (beginingPoint ); i <= fin; i += incremntationPar)
+            for (double i = beginingPoint; i <= (float)(Width * 0.90); i += incremntationPar)
             {
+
+
                 // create the  line sepratores 
+
+                graphics.FillRectangle(brushValeurBlack, (float)i, (float)(Height * 0.60) - 23, 1, (float)(Height * 0.12));
+               
+
                 
-                    graphics.FillRectangle(brushValeurBlack, i, (int)(Height * 0.60)-23, 1, (int)(Height * 0.12));
 
 
-
-                graphics.DrawString((f).ToString(), font, textBrush, i - 5, (int)(Height * 0.60) - 50);
+                graphics.DrawString((f).ToString(), font, textBrush, (float)i - 10, (float)(Height * 0.60) - 50);
                 if (f <= Valeur_Max)
                 {
                     f += Valeur_Max / 4;
@@ -147,17 +200,18 @@ namespace boutonuser_control_2015
 
                 }
             }
-            for (int i = 0; i <( Mesure*fin)/Valeur_Max; i++)
+
+
+
+
+            for (int i = 0; i <= ((Mesure * fin)  / Valeur_Max); i++)
             {
-                
-                // the bar red  
-                //graphics.FillRectangle(brushValeur, (beginingPoint ), (int)(Height * 0.60)+2, i , 7);
-               graphics.DrawEllipse(penOrange, (beginingPoint+i) - 14, (int)(Height * 0.60) + 2 - 14,14 + 14, 14 + 14);
-               // graphics.FillEllipse(brushValeurRed, (beginingPoint) - 14+i, (int)(Height * 0.60) + 2 - 14, 14 + 14, 14 + 14);
+                graphics.DrawEllipse(penOrange, (float)(beginingPoint + i) - 14, (float)(Height * 0.60) + 2 - 14, 14 + 14, 14 + 14);
+
+              
                 Thread.Sleep(50);
 
             }
-        
 
 
         }
