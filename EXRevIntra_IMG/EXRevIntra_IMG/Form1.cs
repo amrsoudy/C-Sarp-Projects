@@ -111,7 +111,7 @@ namespace EXRevIntra_IMG
 
             TextBox textbox = (TextBox)sender;
 
-            if (!Regex.IsMatch(textbox.Text, @"^[0-9.]+$"))
+            if (!Regex.IsMatch(textbox.Text, @"^[0-9.,]+$"))
             {
 
 
@@ -177,7 +177,6 @@ namespace EXRevIntra_IMG
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             Utils.getInstance().calculer();
            
         }
