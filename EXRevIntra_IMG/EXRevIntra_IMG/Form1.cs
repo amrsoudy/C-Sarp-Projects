@@ -90,8 +90,8 @@ namespace EXRevIntra_IMG
             TextBox textBox = (TextBox)sender ;
 
             String text = textBox.Text;
-
-            if (!Regex.IsMatch(text, @"^[a-zA-Z]+$")) {
+            //[A-Za-z]
+            if (!Regex.IsMatch(text, @"^[a-zA-Z ]+$")) {
 
                 textBox.ForeColor = Color.Red;
 
@@ -111,7 +111,7 @@ namespace EXRevIntra_IMG
 
             TextBox textbox = (TextBox)sender;
 
-            if (!Regex.IsMatch(textbox.Text, @"^[0-9]+$"))
+            if (!Regex.IsMatch(textbox.Text, @"^[0-9.]+$"))
             {
 
 
@@ -177,13 +177,9 @@ namespace EXRevIntra_IMG
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            Boolean status = Utils.getInstance().verifi();
-            //if (status) {
 
-            //    Utils.getInstance().calculer();
-
-            //}
+            Utils.getInstance().calculer();
+           
         }
     }
 }
