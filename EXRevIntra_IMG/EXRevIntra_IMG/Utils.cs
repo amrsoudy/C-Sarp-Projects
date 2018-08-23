@@ -134,6 +134,7 @@ namespace EXRevIntra_IMG
 
 
                     form1.textBox6.Text = img.ToString("#.0");
+
                     if (sex == 0)
                     {
 
@@ -207,7 +208,7 @@ namespace EXRevIntra_IMG
 
             Boolean status = false;
 
-            if (!double.TryParse(form1.textBox2.Text.Replace('.', ','), out taille))
+            if (!double.TryParse(form1.textBox2.Text, out taille))
 
             {
                 form1.textBox2.Focus();
@@ -218,7 +219,7 @@ namespace EXRevIntra_IMG
             }
             else
             {
-                String[] s = taille.ToString().Split(',');
+                String[] s = taille.ToString().Split('.');
                 int number = s[1].Length;
                 MessageBox.Show(number.ToString());
                 if (number > 2)

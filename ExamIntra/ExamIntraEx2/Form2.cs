@@ -14,6 +14,8 @@ namespace ExamIntraEx2
     public partial class Form2 : Form
     {
         Utils util = Utils.getInstance();
+
+
         private static Form2 form2;
         Form1 form1 = Form1.getInstance();
         public static Form2 getInstance() {
@@ -27,6 +29,7 @@ namespace ExamIntraEx2
             }
             else
             {
+                form2 = new Form2();
 
                 return form2;
 
@@ -42,23 +45,16 @@ namespace ExamIntraEx2
 
         private void Afficher()
         {
-
-            try
-            {
-                
-                label1.Text = "Mr " + util.Nom + " , " + util.Prenom;
+           
+                label1.Text = "Mr " + Utils.getInstance().Nom+ " , " + util.Prenom;
                 label2.Text = util.corrial.ToString();
                 label3.Text = "Merci d'avoir rempli votre déclaration fiscale .";
                 label4.Text = "Voici les mountants qui vous concernent .";
                 label5.Text = "Mountant déclaré : " + util._mountant + " $";
                 label6.Text = "Contisation déclarée : " + util._Costisation + " $";
                 label7.Text = "Remboursement auquel vous avez droit : " + util.Remb + " $";
-            }
-            catch (Exception e) {
-
-                MessageBox.Show("il ya un error  Svp verifi tous les data");
-
-            }
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

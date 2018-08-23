@@ -71,6 +71,12 @@ namespace ExamIntraEx2
 
 
         }
+        public Utils() {
+
+
+
+
+        }
 
 
 
@@ -187,7 +193,9 @@ namespace ExamIntraEx2
                 {
 
                     Remb = _mountant * 0.15 - _Costisation;
-                    form1.Visible = false;
+                    form1.Visible = true;
+                    //Form2.getInstance().label1.Text = Nom;
+
                     Form2.getInstance().Show();
 
                 }

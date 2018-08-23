@@ -37,14 +37,16 @@ namespace ExamIntraEx2
         private Form1()
         {
             InitializeComponent();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Utils.getInstance().calculer();
-            
-            
-           
+            label9.Text = Utils.getInstance().Nom;
+
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
