@@ -207,19 +207,24 @@ namespace EXRevIntra_IMG
 
             Boolean status = false;
 
-            if (!double.TryParse(form1.textBox2.Text.Replace('.', ','), out taille))
+            if (!double.TryParse(form1.textBox2.Text, out taille))
+
 
             {
+                
+
                 form1.textBox2.Focus();
 
-                form1.labelText2.Text = "le taille dois etre dans cette formatte  #.##";
+                form1.labelText2.Text = "le taille dois etre dans cette formatte  #,##";
 
 
             }
             else
             {
-                String[] s = taille.ToString().Split(',');
+                MessageBox.Show(taille.ToString());
+                String[] s = taille.ToString().Split('.');
                 int number = s[1].Length;
+
                 MessageBox.Show(number.ToString());
                 if (number > 2)
                 {

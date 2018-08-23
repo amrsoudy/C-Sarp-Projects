@@ -90,7 +90,7 @@ namespace EXRevIntra_IMG
             TextBox textBox = (TextBox)sender ;
 
             String text = textBox.Text;
-            //[A-Za-z]
+            
             if (!Regex.IsMatch(text, @"^[a-zA-Z ]+$")) {
 
                 textBox.ForeColor = Color.Red;
