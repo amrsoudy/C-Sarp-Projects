@@ -1,10 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace PUB_VERIFI_IMG
+namespace EXRevIntra_IMG
 {
-    public class Class1
+    class Utils
     {
-          double taille;
+        double taille;
         int age;
         int masse;
         int sex;
@@ -114,6 +121,7 @@ namespace PUB_VERIFI_IMG
         public void calculer()
         {
             Boolean status = verifi();
+
             MessageBox.Show(status.ToString() + " verifi");
             if (status)
             {
@@ -124,9 +132,12 @@ namespace PUB_VERIFI_IMG
                 {
 
                     img = Math.Round((1.2 * masse / (taille * taille)) + (0.23 * age) - (10.8 * sex) - 5.4);
+                    //notify la pubisher
+                    Publisher.getInstance().notify(img);
 
 
-                    form1.textBox6.Text = img.ToString("#.0");
+                   // form1.textBox6.Text = img.ToString("#.0");
+
                     if (sex == 0)
                     {
 
@@ -188,10 +199,6 @@ namespace PUB_VERIFI_IMG
             }
 
         }
-
-
-
-
 
 
 
