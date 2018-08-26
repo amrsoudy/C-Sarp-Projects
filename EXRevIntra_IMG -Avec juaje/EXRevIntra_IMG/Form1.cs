@@ -15,7 +15,10 @@ namespace EXRevIntra_IMG
     {
         private static Form1 form1;
 
-        public static Form1 getInstance() {
+        Publisher pub;
+
+        public static Form1 getInstance()
+        {
 
             if (form1 == null)
             {
@@ -24,7 +27,8 @@ namespace EXRevIntra_IMG
                 return form1;
 
             }
-            else {
+            else
+            {
 
                 return form1;
 
@@ -36,7 +40,10 @@ namespace EXRevIntra_IMG
         public Form1()
         {
             InitializeComponent();
+            attacherLesObserveur();
         }
+
+
 
         internal void textBox7_TextChanged(object sender, EventArgs e)
         {
@@ -55,7 +62,8 @@ namespace EXRevIntra_IMG
 
         private void clearAllTextBoxes()
         {
-            foreach (Control c in panel1.Controls) {
+            foreach (Control c in panel1.Controls)
+            {
 
                 if (c is TextBox)
                 {
@@ -63,10 +71,10 @@ namespace EXRevIntra_IMG
 
                     radioButton1.Checked = false;
                     radioButton2.Checked = false;
-                    
+
                 }
-             
-               
+
+
 
             }
             foreach (Control c in panel2.Controls)
@@ -87,23 +95,26 @@ namespace EXRevIntra_IMG
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            TextBox textBox = (TextBox)sender ;
+            TextBox textBox = (TextBox)sender;
 
             String text = textBox.Text;
-            
-            if (!Regex.IsMatch(text, @"^[a-zA-Z ]+$")) {
+            //[A-Za-z]
+            if (!Regex.IsMatch(text, @"^[a-zA-Z ]+$"))
+            {
 
                 textBox.ForeColor = Color.Red;
 
-            } else {
+            }
+            else
+            {
 
                 textBox.ForeColor = Color.Black;
 
             }
 
-            
-            
-            
+
+
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -119,7 +130,8 @@ namespace EXRevIntra_IMG
 
 
             }
-            else {
+            else
+            {
 
                 textbox.ForeColor = Color.Black;
 
@@ -177,8 +189,24 @@ namespace EXRevIntra_IMG
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             Utils.getInstance().calculer();
-           
+
+
+        }
+
+        private void attacherLesObserveur()
+        {
+            pub = Publisher.getInstance();
+
+            Observer obs1 = new Observer();
+            Observeur2 obs2 = new Observeur2();
+
+            
+
+            pub.maValeurChanger += new EXRevIntra_IMG.Publisher.MonDelagate(obs1.ecrirejuage);
+            pub.maValeurChanger += new EXRevIntra_IMG.Publisher.MonDelagate(obs2.ecrireTextBox);
+         
         }
     }
 }

@@ -63,17 +63,10 @@ namespace EXRevIntra_IMG
             else
             {
                 form1.labelText1.Text = "";
-<<<<<<< HEAD
-                status = true;
-            }
-            
-              if (!Regex.IsMatch(form1.textBox2.Text, @"[0-9]+$"))
-=======
                 status1 = true;
             }
 
             if (!Regex.IsMatch(form1.textBox2.Text, @"[0-9]+$"))
->>>>>>> 6fb74628fd11a124a7a1eface316eb66f72ca71b
             {
 
                 form1.textBox2.ForeColor = Color.DarkRed;
@@ -104,15 +97,11 @@ namespace EXRevIntra_IMG
                 form1.labelText4.Text = "SVP  verifi le Nom (il dois  inclue numbers seulement)";
 
             }
-<<<<<<< HEAD
-            
-=======
             else
             {
                 form1.labelText4.Text = "";
                 status4 = true;
             }
->>>>>>> 6fb74628fd11a124a7a1eface316eb66f72ca71b
 
             if ((status1 = true) && (status2 = true) && (status3 = true) && (status4 = true))
             {
@@ -132,6 +121,7 @@ namespace EXRevIntra_IMG
         public void calculer()
         {
             Boolean status = verifi();
+
             MessageBox.Show(status.ToString() + " verifi");
             if (status)
             {
@@ -142,9 +132,11 @@ namespace EXRevIntra_IMG
                 {
 
                     img = Math.Round((1.2 * masse / (taille * taille)) + (0.23 * age) - (10.8 * sex) - 5.4);
+                    //notify la pubisher
+                    Publisher.getInstance().notify(img);
 
 
-                    form1.textBox6.Text = img.ToString("#.0");
+                   // form1.textBox6.Text = img.ToString("#.0");
 
                     if (sex == 0)
                     {
@@ -210,10 +202,6 @@ namespace EXRevIntra_IMG
 
 
 
-
-
-
-
         private Boolean VERIFINUMBER()
         {
 
@@ -221,17 +209,22 @@ namespace EXRevIntra_IMG
 
             if (!double.TryParse(form1.textBox2.Text, out taille))
 
+
             {
+                
+
                 form1.textBox2.Focus();
 
-                form1.labelText2.Text = "le taille dois etre dans cette formatte  #.##";
+                form1.labelText2.Text = "le taille dois etre dans cette formatte  #,##";
 
 
             }
             else
             {
+                MessageBox.Show(taille.ToString());
                 String[] s = taille.ToString().Split('.');
                 int number = s[1].Length;
+
                 MessageBox.Show(number.ToString());
                 if (number > 2)
                 {

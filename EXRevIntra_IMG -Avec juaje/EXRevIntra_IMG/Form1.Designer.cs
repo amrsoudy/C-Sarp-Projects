@@ -54,6 +54,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.userBouton1 = new boutonuser_control_2015.UserBouton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -243,6 +244,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.userBouton1);
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.label8);
@@ -319,6 +321,17 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // userBouton1
+            // 
+            this.userBouton1.backgroundColor = System.Drawing.Color.LightGray;
+            this.userBouton1.Location = new System.Drawing.Point(520, 23);
+            this.userBouton1.Mesure = 0;
+            this.userBouton1.Name = "userBouton1";
+            this.userBouton1.Size = new System.Drawing.Size(301, 109);
+            this.userBouton1.TabIndex = 20;
+            this.userBouton1.Valeur_Max = 100;
+            this.userBouton1.Valeur_Min = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +380,7 @@
         internal System.Windows.Forms.Label labelText4;
         internal System.Windows.Forms.Label labelText3;
         internal System.Windows.Forms.Label labelText2;
+        internal boutonuser_control_2015.UserBouton userBouton1;
     }
 }
 

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CB37FA23-B190-4A97-8E1C-E3637128049B}</ProjectGuid>
+    <ProjectGuid>{C3C47434-D2E1-4DFE-80AB-CEB4686345BF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EXRevIntra_IMG</RootNamespace>
-    <AssemblyName>EXRevIntra_IMG</AssemblyName>
+    <RootNamespace>AddSupDelegate</RootNamespace>
+    <AssemblyName>AddSupDelegate</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,7 +51,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Observer.cs" />
+    <Compile Include="InfoEventArgs.cs" />
+    <Compile Include="MaDelagate.cs" />
+    <Compile Include="Observeur1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publisher.cs" />

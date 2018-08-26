@@ -51,7 +51,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InfoEventArgs.cs" />
     <Compile Include="Observer.cs" />
+    <Compile Include="Observeur2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publisher.cs" />
@@ -80,6 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AmrGauge\boutonuser-control_2015\boutonuser-control_2015.csproj">
+      <Project>{3A6C4D20-7EBF-4725-9B96-4DFF7C3AB56A}</Project>
+      <Name>boutonuser-control_2015</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
