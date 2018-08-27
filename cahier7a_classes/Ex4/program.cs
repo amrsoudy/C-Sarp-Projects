@@ -20,7 +20,6 @@ namespace Ex4
             objPersonne.AfficheDetailsPersonne(objPersonne);
 
 
-
         }
     }
 }

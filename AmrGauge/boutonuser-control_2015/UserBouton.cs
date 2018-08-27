@@ -68,15 +68,16 @@ namespace boutonuser_control_2015
 
         private Color _backgroundColor = Color.LightGray;
 
-        public Color backgroundColor {
+        public Color backgroundColor
+        {
 
             get { return _backgroundColor; }
-            set { _backgroundColor = value; Invalidate();}
+            set { _backgroundColor = value; Invalidate(); }
 
 
         }
-    //etape 2
-    private string _labelBouton = "";
+        //etape 2
+        private string _labelBouton = "";
         [Browsable(true), DefaultValue("")]
         public string LabelBouton
         {
@@ -112,9 +113,9 @@ namespace boutonuser_control_2015
             graphics.DrawRectangle(pen, 0, 0, Width, Height);
             Rectangle rect = new Rectangle(0, 0, Width, Height);
 
-            Rectangle rect1 = new Rectangle(10,10, Width-20, Height-20);
-          
-            
+            Rectangle rect1 = new Rectangle(10, 10, Width - 20, Height - 20);
+
+
 
             GraphicsPath RoundedRect(Rectangle bounds, int radius)
             {
@@ -174,22 +175,26 @@ namespace boutonuser_control_2015
             graphics.FillRectangle(brushValeurWhite, (float)(beginingPoint), (float)(Height * 0.60), (float)fin, 12);
 
             double f = 0;
-          
-         
+
+
             // MessageBox.Show(Width.ToString()+"widith * 80"+ Width* 0.80+" begining "+beginingPoint +"  fin  : "+fin);
 
             double incremntationPar = Width / 5;
 
             for (double i = beginingPoint; i <= (float)(Width * 0.90); i += incremntationPar)
             {
+               
 
 
                 // create the  line sepratores 
 
-                graphics.FillRectangle(brushValeurBlack, (float)i, (float)(Height * 0.60) - 23, 1, (float)(Height * 0.12));
-               
+                graphics.FillRectangle(brushValeurBlack, (float)i, (float)(Height * 0.60) - 23, 3, (float)(Height * 0.12));
+                graphics.FillRectangle(brushValeurBlack, (float)(i)/ 3, (float)(Height * 0.65) - 23, 1, (float)(Height * 0.06));
 
-                
+
+
+
+
 
 
                 graphics.DrawString((f).ToString(), font, textBrush, (float)i - 10, (float)(Height * 0.60) - 50);
@@ -202,13 +207,11 @@ namespace boutonuser_control_2015
             }
 
 
-
-
-            for (int i = 0; i <= ((Mesure * fin)  / Valeur_Max); i++)
+            for (int i = 0; i <= ((Mesure * fin) / Valeur_Max); i++)
             {
                 graphics.DrawEllipse(penOrange, (float)(beginingPoint + i) - 14, (float)(Height * 0.60) + 2 - 14, 14 + 14, 14 + 14);
 
-              
+
                 Thread.Sleep(50);
 
             }

@@ -8,7 +8,7 @@ namespace Ex2
 {
     class Utils
     {
-        public String ConcatenationNomPrenom(String nom, String prenom) {
+        public static String ConcatenationNomPrenom(String nom, String prenom) {
 
             String nom1 = nom.ToUpper();
             String prenom1 = prenom.ToUpper();
@@ -18,7 +18,7 @@ namespace Ex2
 
 
         }
-        public String ModifierCode(String code){
+        public static String ModifierCode(String code){
 
             if (code.ToUpper().StartsWith("A") || code.ToUpper().StartsWith("B")|| code.ToUpper().StartsWith("F")|| code.ToUpper().StartsWith("M")) {
                 code = "AXD" + code;
