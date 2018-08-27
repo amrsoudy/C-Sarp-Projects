@@ -63,10 +63,17 @@ namespace EXRevIntra_IMG
             else
             {
                 form1.labelText1.Text = "";
+<<<<<<< HEAD
+                status = true;
+            }
+            
+              if (!Regex.IsMatch(form1.textBox2.Text, @"[0-9]+$"))
+=======
                 status1 = true;
             }
 
             if (!Regex.IsMatch(form1.textBox2.Text, @"[0-9]+$"))
+>>>>>>> 6fb74628fd11a124a7a1eface316eb66f72ca71b
             {
 
                 form1.textBox2.ForeColor = Color.DarkRed;
@@ -97,11 +104,15 @@ namespace EXRevIntra_IMG
                 form1.labelText4.Text = "SVP  verifi le Nom (il dois  inclue numbers seulement)";
 
             }
+<<<<<<< HEAD
+            
+=======
             else
             {
                 form1.labelText4.Text = "";
                 status4 = true;
             }
+>>>>>>> 6fb74628fd11a124a7a1eface316eb66f72ca71b
 
             if ((status1 = true) && (status2 = true) && (status3 = true) && (status4 = true))
             {
