@@ -4,12 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Employe
+namespace Ex2
 {
     class Utils
     {
-        a.concatenationNomPrenom()
-b.modifierCode()
+        public String ConcatenationNomPrenom(String nom, String prenom) {
+
+            String nom1 = nom.ToUpper();
+            String prenom1 = prenom.ToUpper();
+
+
+            return nom1 + "  " + prenom1;
+
+
+        }
+        public String ModifierCode(String code){
+
+            if (code.ToUpper().StartsWith("A") || code.ToUpper().StartsWith("B")|| code.ToUpper().StartsWith("F")|| code.ToUpper().StartsWith("M")) {
+                code = "AXD" + code;
+               
+
+            }
+
+            return code;
+
+}
+
 
     }
 }
