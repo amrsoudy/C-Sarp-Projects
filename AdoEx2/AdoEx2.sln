@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoMySql", "AdoEx2\AdoMySql
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoOracle", "AdoOracle\AdoOracle.csproj", "{1CB5BD9E-14AF-4910-B1F1-90151C8767E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoSqlLite", "AdoSqlLite\AdoSqlLite.csproj", "{9A321E50-3254-439B-86A6-2AD36FD5F352}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1CB5BD9E-14AF-4910-B1F1-90151C8767E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB5BD9E-14AF-4910-B1F1-90151C8767E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB5BD9E-14AF-4910-B1F1-90151C8767E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A321E50-3254-439B-86A6-2AD36FD5F352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A321E50-3254-439B-86A6-2AD36FD5F352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A321E50-3254-439B-86A6-2AD36FD5F352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A321E50-3254-439B-86A6-2AD36FD5F352}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
