@@ -14,3 +14,19 @@ Version: '5.1.35-community'  socket: ''  port: 3306  MySQL Community Server (GPL
 180827 16:25:11 [Note] Event Scheduler: Loaded 0 events
 180827 16:25:11 [Note] C:\Users\1795162\Documents\GitHub\C-Sharp-Projects\utilitaire\mowes_portable\mysql\bin\mysqld-nt.exe: ready for connections.
 Version: '5.1.35-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+180827 18:44:24 [Note] C:\Users\1795162\Documents\GitHub\C-Sharp-Projects\utilitaire\mowes_portable\mysql\bin\mysqld-nt.exe: Normal shutdown
+
+180827 18:44:24 [Note] Event Scheduler: Purging the queue. 0 events
+180827 18:44:24  InnoDB: Starting shutdown...
+180827 18:44:25  InnoDB: Shutdown completed; log sequence number 0 719054
+180827 18:44:25 [Warning] Forcing shutdown of 1 plugins
+180827 18:44:25 [Note] C:\Users\1795162\Documents\GitHub\C-Sharp-Projects\utilitaire\mowes_portable\mysql\bin\mysqld-nt.exe: Shutdown complete
+
+180827 18:44:27  InnoDB: Started; log sequence number 0 719054
+180827 18:44:27 [Note] Event Scheduler: Loaded 0 events
+180827 18:44:27 [Note] C:\Users\1795162\Documents\GitHub\C-Sharp-Projects\utilitaire\mowes_portable\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.35-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+180828 14:46:17  InnoDB: Started; log sequence number 0 719054
+180828 14:46:19 [Note] Event Scheduler: Loaded 0 events
+180828 14:46:19 [Note] C:\Users\1795162\Documents\GitHub\C-Sharp-Projects\utilitaire\mowes_portable\mysql\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.35-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
