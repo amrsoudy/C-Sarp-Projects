@@ -15,6 +15,7 @@ namespace AdoMySql
                 "database=northwindmysql;port=3306;";
             //obhjet connection 
             MySqlConnection connecection = new MySqlConnection(cs);
+            MySqlDataReader reader = null;
             try
             {
                 Console.WriteLine("connection sur MySql....");
@@ -27,7 +28,7 @@ namespace AdoMySql
 
                 ////recuperer le curser 
 
-                //MySqlDataReader reader = sql.ExecuteReader();
+                // reader = sql.ExecuteReader();
 
                 //while (reader.Read())
                 //{
@@ -48,9 +49,66 @@ namespace AdoMySql
                 //MySqlCommand sql3 = new MySqlCommand(queryUpdate, connecection);
                 //sql3.ExecuteNonQuery();
 
-                String queryDelete = "delete from categories where CategoryName = 'sport'  ";
-                MySqlCommand sql4 = new MySqlCommand(queryDelete, connecection);
-                sql4.ExecuteNonQuery();
+                //String queryDelete = "delete from categories where CategoryName = 'sport'  ";
+                //MySqlCommand sql4 = new MySqlCommand(queryDelete, connecection);
+                //sql4.ExecuteNonQuery();
+
+                //String queryMax = "select MAX(UnitPrice) from  products ";
+                //MySqlCommand sql5 = new MySqlCommand(queryMax, connecection);
+                //double no = (double)sql5.ExecuteScalar();
+                //Console.WriteLine(no.ToString());
+
+                //String querySum = "select SUM(UnitPrice) from  products ";
+                //MySqlCommand sql6 = new MySqlCommand(querySum, connecection);
+                //double no2 = (double)sql6.ExecuteScalar();
+                //Console.WriteLine(no2.ToString());
+
+
+
+                //String queryMin = "select Min(UnitPrice) from  products ";
+                //MySqlCommand sql7 = new MySqlCommand(queryMin, connecection);
+                //double no3 = (double)sql7.ExecuteScalar();
+                //Console.WriteLine(no3.ToString());
+
+                //String reqSelect = "select ProductName ,UnitPrice from products where ProductName like @nomproduit";
+                String reqSelect = "select ProductName ,UnitPrice from products where ProductName like @nomproduit And UnitPrice > @prix ";
+
+                Console.Write("saiser le nom du produit : ");
+                String nomprd = Console.ReadLine();
+                Console.Write("Saiser le prix de commencer ");
+                double prixDemande;
+
+                double.TryParse(Console.ReadLine(), out prixDemande);
+
+                MySqlParameter parameter = new MySqlParameter();
+                parameter.ParameterName = "@nomproduit";
+                parameter.Value = "%"+nomprd+"%";
+
+                MySqlParameter parameter2 = new MySqlParameter();
+
+                parameter2.ParameterName = "@prix";
+                parameter2.Value = prixDemande;
+
+
+
+                MySqlCommand sql = new MySqlCommand(reqSelect, connecection);
+                sql.Parameters.Add(parameter);
+                sql.Parameters.Add(parameter2);
+
+
+                reader = sql.ExecuteReader();
+
+                while (reader.Read()) {
+
+                    String nom = (string)reader[0];
+                    double prix = Convert.ToDouble(reader[1]);
+                    Console.WriteLine("nom est : {0} - et prix est : {1}", nom, prix);
+
+
+                }
+               
+
+
             }
             catch (Exception e)
             {
@@ -59,6 +117,9 @@ namespace AdoMySql
             }
             finally {
 
+                if (reader != null) reader.Close();
+
+                if(connecection !=null)
 
                 connecection.Close();
             }
