@@ -27,18 +27,19 @@ namespace AdoOracle
                 Console.WriteLine("connection vers oracle ");
                 connection.Open();
                 Console.WriteLine("connected");
-                String query = "SELECT last_name,first_name from employees";
+                String query = "SELECT LASTNAME,FIRSTNAME from employees";
                 OracleCommand sql = new OracleCommand();
                 sql.Connection = connection;
                 sql.CommandText = query;
                 sql.CommandType = System.Data.CommandType.Text;
 
-                // 
+               
                 OracleDataReader reader = sql.ExecuteReader();
 
                 while (reader.Read())
                 {
 
+                    Console.WriteLine("we are here ");
 
                     String nom, prenom;
                     nom = (String)reader[0];
