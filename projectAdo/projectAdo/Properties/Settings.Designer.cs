@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace clientTemprateur.Properties {
+namespace projectAdo.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,22 +26,11 @@ namespace clientTemprateur.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\northwnd.mdf;" +
-            "Integrated Security=True;Connect Timeout=30")]
-        public string northwndConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\1795162\\Documents\\Am" +
+            "rDB.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string AmrDBConnectionString {
             get {
-                return ((string)(this["northwndConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"H:\\csharp\\utilitaires\\northw" +
-            "ind pour SQL serveur\\northwnd.mdf\";Integrated Security=True;Connect Timeout=30")]
-        public string northwndConnectionString1 {
-            get {
-                return ((string)(this["northwndConnectionString1"]));
+                return ((string)(this["AmrDBConnectionString"]));
             }
         }
     }

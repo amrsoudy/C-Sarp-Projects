@@ -28,11 +28,21 @@ namespace clientTemprateur
             String msg = "";
 
             double a;
-            Double.TryParse(textBox1.Text, out a);
-            double res = proxy.Calcultemp(a,"c", out msg);
+            if (Double.TryParse(textBox1.Text, out a))
+            {
 
-            textBox3.Text = res.ToString();
-            textBox2.Text = msg;
+                double res = proxy.Calcultemp(a, "c", out msg);
+
+                textBox3.Text = res.ToString();
+                textBox2.Text = msg;
+
+            }
+            else
+            {
+
+                textBox2.Text = "SVP ecrire number ";
+            }
+
 
         }
 
@@ -41,12 +51,22 @@ namespace clientTemprateur
             String msg = "";
 
             double a;
-            Double.TryParse(textBox1.Text, out a);
-            double res = proxy.Calcultemp(a, "F", out msg);
+            if (Double.TryParse(textBox1.Text, out a))
+            {
 
-            textBox3.Text = res.ToString();
-            textBox2.Text = msg;
+                double res = proxy.Calcultemp(a, "c", out msg);
 
+                textBox3.Text = res.ToString();
+                textBox2.Text = msg;
+
+            }
+            else
+            {
+
+                textBox2.Text = "SVP ecrire number ";
+            }
         }
+
+
     }
 }
