@@ -50,16 +50,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AmrDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AmrDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmrDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bail.Designer.cs">
+      <DependentUpon>Bail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locataire.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Locataire.Designer.cs">
       <DependentUpon>Locataire.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paiement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paiement.Designer.cs">
+      <DependentUpon>paiement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bail.resx">
+      <DependentUpon>Bail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Locataire.resx">
       <DependentUpon>Locataire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paiement.resx">
+      <DependentUpon>paiement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +112,17 @@
     </None>
     <None Include="AmrDBDataSet.xss">
       <DependentUpon>AmrDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AmrDBDataSet1.xsc">
+      <DependentUpon>AmrDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AmrDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AmrDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AmrDBDataSet1.xss">
+      <DependentUpon>AmrDBDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -13,8 +13,10 @@ namespace projectAdo
 {
     public partial class Locataire : Form
     {
-        public Locataire()
+        MainForm form;
+        public Locataire(MainForm form)
         {
+            this.form = form;
             InitializeComponent();
         }
 
@@ -79,6 +81,13 @@ namespace projectAdo
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Locataire_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
+            this.Visible = false;
+            form.Visible = true;
         }
     }
 }

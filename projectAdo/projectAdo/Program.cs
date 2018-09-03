@@ -16,7 +16,7 @@ namespace projectAdo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Locataire());
+            Application.Run(new MainForm());
         }
     }
 }
