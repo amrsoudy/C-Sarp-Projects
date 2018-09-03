@@ -22,7 +22,7 @@ public class ClientjavaServiceWebCsharp {
             org.tempuri.WebService1Soap port = service.getWebService1Soap();
             double a = 15.0d;
             double b = 8.3d;
-            double result = port.calculateursoustraction(a, b);
+            double result = port.calculersupstraction(a, b);
             System.out.println("Resulte de la soustraction  = " + result);
         } catch (Exception ex) {
 
