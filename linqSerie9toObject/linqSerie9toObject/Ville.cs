@@ -8,9 +8,9 @@ namespace linqSerie9toObject
 {
     class Paye
     {
-        String city;
-        String Ville;
-        double pub;
+       public String city;
+       public String Ville;
+        public double pub;
 
 
         public Paye(String city ,String ville,double pub) {
