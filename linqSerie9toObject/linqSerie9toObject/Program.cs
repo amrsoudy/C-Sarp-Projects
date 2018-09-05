@@ -183,12 +183,12 @@ new Persone{ name = "Cameo",prenom = "Donadi",city = "Rome"},    };
                                     join per in listPerson on
                                      p.city equals per.city
                                      //group in chaque ville the persones 
-                                     group per.name by p.Ville
+                                     group per.name by p.city
                                      //on cree ici la View comme view de DB
                                      into groups
                                      //ici on a fait filter dans la view 
                                      //if the continue de eash group plus que 2
-                                     where(groups.ToList().Count() > 2)
+                                     where(groups.ToList().Count() >= 2)
                                     //afficher les payes avec le number de personne que vivre dans 
                                     select new { ville = groups.Key, personecount = groups.ToList().Count() };
                                    // select new { ville = groups.Key, personenames = groups.ToList() };
@@ -209,7 +209,7 @@ new Persone{ name = "Cameo",prenom = "Donadi",city = "Rome"},    };
 
             var groupVilleEtToutLesPersonne = from p in listPaye
                                               join per in listPerson on p.city equals per.city
-                                              group per.name by p.Ville
+                                              group per.name by p.city
                                               into groups
                                               select new
                                               {
