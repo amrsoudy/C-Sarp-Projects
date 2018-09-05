@@ -65,14 +65,14 @@ namespace AgeWebService
 
             }
          
-            GetRequestHeaders();
-            return s ;
+            String f  = GetRequestHeaders();
+            return s +"   "+f;
             
 
         }
 
       
-        public void GetRequestHeaders()
+        public String GetRequestHeaders()
         {
             //HttpContext ctx = HttpContext.Current;
             //if (ctx == null || ctx.Request == null || ctx.Request.Headers == null)
@@ -104,6 +104,7 @@ namespace AgeWebService
            
 
             String s = machineName + "," + username + "," + dateTime;
+            return s;
 
 
            
