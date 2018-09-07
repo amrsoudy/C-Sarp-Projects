@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final_2018_Amr_Seoudy", "ExamenFinallAmrSeoudyEx3\Final_2018_Amr_Seoudy.csproj", "{A9BF06DF-D37E-473E-AE0D-F0ECE731D01D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9BF06DF-D37E-473E-AE0D-F0ECE731D01D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9BF06DF-D37E-473E-AE0D-F0ECE731D01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9BF06DF-D37E-473E-AE0D-F0ECE731D01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9BF06DF-D37E-473E-AE0D-F0ECE731D01D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2789B16B-EE11-42D7-BC58-ED08E6CDBCE1}
+	EndGlobalSection
+EndGlobal
