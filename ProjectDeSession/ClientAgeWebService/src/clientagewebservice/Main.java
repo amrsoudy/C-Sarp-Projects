@@ -30,16 +30,14 @@ public class Main {
             String[] split = DateComplete.split("-");
             year = Integer.parseInt(split[2]);
 
-
             org.tempuri.WebService1 service = new org.tempuri.WebService1();
             org.tempuri.WebService1Soap port = service.getWebService1Soap();
 
             String s = port.verifier(year);
+       
             System.out.println(s);
 
         } catch (Exception ex) {
-            
-            
 
         }
 
